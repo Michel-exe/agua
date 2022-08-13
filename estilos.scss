@@ -1,0 +1,220 @@
+.admin{
+    position: fixed;
+    z-index: 2;
+    min-height: 100vh;
+    background: white;
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    section{
+        picture{
+            width: 200px;
+            height: 200px;
+            box-shadow: 0 0 5px #aaa;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+        h2{
+            margin-top: 40px;
+        }
+        span{
+            margin-top: 15px;
+            height: 10px;
+            width: 90%;
+            max-width: 600px;
+            background: #a1a1ff;
+            border-radius: 20px;
+            // overflow: hidden;
+            position: relative;
+            transition: 1s all;
+            i{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 10px;
+                width: 0%;
+                transition: .1s all;
+                background: #3a3aff;
+            }
+            &.charge{
+                width: 50px;
+                height: 10px;
+                transition: .5s all;
+                i{
+                    display: none;
+                    // background: #0000;
+                }
+            }
+            &.charges{
+                background: #0000;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border-top: 10px solid #3a3aff;
+                border-bottom: 10px solid #3a3aff;
+                border-left: 10px solid #c2c2ff;
+                border-right: 10px solid #c2c2ff;
+                padding: 20px;
+                animation: rot 2s linear infinite;
+                // i{
+                    // background: #0000;
+                    // width: calc(100% + 20px);
+                    // height: calc(100% + 20px);
+                    // border-top: 10px solid #fff;
+                    // border-bottom: 10px solid #fff;
+                    // border-left: 10px solid #f000;
+                    // border-right: 10px solid #f000;
+                    // border-radius: 50%;
+                    // left: -10px;
+                    // top: -10px;
+                    // transform: rotate(.25turn);
+                    // animation: rot 4s linear infinite reverse;
+                    // animation-delay: 1s;
+                // }
+            }
+        }
+    }
+}
+@keyframes rot {
+    from{ transform: rotate(0turn);}
+    to{ transform: rotate(1turn);}
+}
+.cuerpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(245, 245, 245);
+    background-image: url("https://2.bp.blogspot.com/-dcbWi_YBx4E/U44lgy5DZdI/AAAAAAABx2A/uRNXNXHjbSk/s1600/paisajes-naturales-reflejados-en-el-agua.jpg");
+    background-position: center;
+    background-size: cover;
+    >section{
+        background: rgba($colA1, 0.45);
+        backdrop-filter: blur(10px);
+        padding: 25px 0;
+        border-radius: 15px;
+        width: 95%;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgb(138, 155, 255);
+        h1{
+            color: $colA4;
+        }
+        form{
+            width: 90%;
+            div{
+                margin-top: 25px;
+                label{
+                    color: $colA4;
+                }
+                .setionInput{
+                    padding: 10px 5px;
+                    display: grid;
+                    grid-template-columns: 30px 1fr;
+                    box-shadow: 0 0 3px #ffffff;
+                    margin-top: 5px;
+                    border-radius: 10px;
+                    transition: .4s all;
+                    input{
+                        color: $colA4;
+                    }
+                    span{
+                        display: grid;
+                        place-items: center;
+                        color: $colA4;
+                    }
+                    &.act{
+                        box-shadow: 0 0 7px #ffffff;
+                    }
+                }
+            }
+            button{
+                margin-top: 25px;
+                width: 200px;
+                padding: 10px 0;
+                background: $colA3;
+                color: $colA4;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:"500px") {
+    html{
+        font-size: 18px;
+    }
+}
+
+header{
+    display: flex;
+    width: 100%;
+    // background: red;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 0;
+    // background: red;
+    // form{
+    //     padding-left: 100px;
+    // }
+    >div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        // background: red;
+        h2{
+            text-align: center;
+        }
+        span{
+            text-align: center;
+            cursor: pointer;
+            svg{
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+.dash{
+    margin-top: 50px;
+    width: 90%;
+    >section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        >div{
+            width: 90%;
+            max-width: 350px;
+            box-shadow: 0 0 4px #aaa;
+            border-radius: 15px;
+            padding: 15px 0;
+            // h2{}
+            span{
+                padding-top: 8px;
+                display: grid;
+                place-content: center;
+                svg{
+                    font-size: 3rem;
+                }
+            }
+            nav{
+                padding-top: 10px;
+                a{
+                    width: 90%;
+                    padding: 7px 0 4px;
+                    border-bottom: .3px solid #aaa;
+                    color: #444;
+                }
+            }
+        }
+    }
+}
