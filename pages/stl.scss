@@ -1,8 +1,17 @@
 .headerTip{
-    padding: 10px 20px;
+    padding: 0 20px;
     box-shadow: 0 0 5px #aaa;
     border-radius: 0 0 10px 10px;
     margin-bottom: 30px;
+    display: flex;
+    h2{
+        height: 100%;
+        // background: red;
+        padding: 20px 0;
+
+        display: grid;
+        place-items: center;
+    }
     section{
         width: 120px;
         margin-right: 0;

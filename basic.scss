@@ -61,6 +61,8 @@ picture{
     grid-template-columns: 80% 1fr;
     gap: 3px;
     box-shadow: 0 0 2px #aaa;
+    transition: .3s all;
+    // box-shadow: 0 0 8px #ff0101;
     border-radius: 10px;
     .setionInput{
         padding: 10px 5px;
