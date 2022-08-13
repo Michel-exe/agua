@@ -6,6 +6,8 @@
     backdrop-filter: blur(10px);
     display: grid;
     place-items: center;
+    transform: scale(0);
+    transition: .4s all;
     section{
         picture{
             width: 200px;
@@ -93,7 +95,7 @@
     background-position: center;
     background-size: cover;
     >section{
-        background: rgba($colA1, 0.45);
+        background: rgba(white, 0.45);
         backdrop-filter: blur(10px);
         padding: 25px 0;
         border-radius: 15px;
@@ -101,14 +103,14 @@
         max-width: 400px;
         box-shadow: 0 0 10px rgb(138, 155, 255);
         h1{
-            color: $colA4;
+            color: white;
         }
         form{
             width: 90%;
             div{
                 margin-top: 25px;
                 label{
-                    color: $colA4;
+                    color: white;
                 }
                 .setionInput{
                     padding: 10px 5px;
@@ -119,12 +121,12 @@
                     border-radius: 10px;
                     transition: .4s all;
                     input{
-                        color: $colA4;
+                        color: white;
                     }
                     span{
                         display: grid;
                         place-items: center;
-                        color: $colA4;
+                        color: white;
                     }
                     &.act{
                         box-shadow: 0 0 7px #ffffff;
@@ -135,8 +137,8 @@
                 margin-top: 25px;
                 width: 200px;
                 padding: 10px 0;
-                background: $colA3;
-                color: $colA4;
+                background: blue;
+                color: white;
                 border-radius: 10px;
                 cursor: pointer;
             }
@@ -151,34 +153,43 @@
 }
 
 header{
-    display: flex;
     width: 100%;
-    // background: red;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
     box-shadow: 0 0 3px #aaa;
     border-radius: 0 0 15px 15px;
     padding: 10px 0;
-    // background: red;
-    // form{
-    //     padding-left: 100px;
-    // }
-    >div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        // background: red;
-        h2{
-            text-align: center;
-        }
-        span{
-            text-align: center;
-            cursor: pointer;
-            svg{
-                font-size: 1.3rem;
+    display: grid;
+    place-items: center;
+    .hea{
+        width: 95%;
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        gap: 10px;
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // width: 90%;
+            // background: red;
+            h2{
+                text-align: center;
+                font-size: 1rem;
             }
+            a{
+                text-align: center;
+                cursor: pointer;
+                color: black;
+                svg{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:"700px") {
+    header{
+        .hea{
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 }
