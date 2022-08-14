@@ -6,7 +6,7 @@ window.addEventListener("submit", e=>{
         if(inpV.value.length>0){
             console.log(inpV.value);
             console.log(selV.value);
-            // window.location.href=`./busqueda.html?ide=${inpV.value}&opc=${selV.value}`
+            window.location.href=`./busqueda.html?ide=${inpV.value}&opc=${selV.value}`
         } else{
             e.target.style.boxShadow=`0 0 8px #ff0000`
             e.target[0].focus()

@@ -17,7 +17,12 @@ $colB1:#608fff;
 $colB2:#F473B9;
 $colB3:#FFBDE6;
 $colB4:#FFDDEE;
-
+body{
+    background-image: url("back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 div,section,form,label,span,footer,button,input,nav,h1,h2,h3,img,picture,header,select,a,textarea{
     display: block;
@@ -60,17 +65,18 @@ picture{
     padding: 10px 5px;
     display: grid;
     grid-template-columns: 30px 1fr;
-    box-shadow: 0 0 3px #ffffff;
     margin-top: 5px;
     border-radius: 10px;
     transition: .4s all;
     input{
-        color: #000;
+        color: #fff;
     }
     span{
         display: grid;
         place-items: center;
-        color:white;
+        svg{
+            color:white;
+        }
     }
     &.act{
         box-shadow: 0 0 7px #ffffff;
@@ -80,12 +86,18 @@ picture{
     display: grid;
     grid-template-columns: 80% 1fr;
     gap: 3px;
-    box-shadow: 0 0 2px #aaa;
+    // box-shadow: 0 0 2px #aaa;
     transition: .3s all;
+    box-shadow: 0 0 5px rgb(44, 255, 61);
+    // background: black;
+    // box-shadow: 0px 0px 3px #fff;
     // box-shadow: 0 0 8px #ff0101;
     border-radius: 10px;
     select{
         box-shadow: 0 0 2px #aaa;
+        color: white;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.749);
         // border-left: 1px solid black;
     }
 }
