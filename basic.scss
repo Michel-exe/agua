@@ -56,6 +56,26 @@ picture{
         height: 100%;
     }
 }
+.setionInput{
+    padding: 10px 5px;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    box-shadow: 0 0 3px #ffffff;
+    margin-top: 5px;
+    border-radius: 10px;
+    transition: .4s all;
+    input{
+        color: #000;
+    }
+    span{
+        display: grid;
+        place-items: center;
+        color:white;
+    }
+    &.act{
+        box-shadow: 0 0 7px #ffffff;
+    }
+}
 .busqueda{
     display: grid;
     grid-template-columns: 80% 1fr;
@@ -64,26 +84,6 @@ picture{
     transition: .3s all;
     // box-shadow: 0 0 8px #ff0101;
     border-radius: 10px;
-    .setionInput{
-        padding: 10px 5px;
-        display: grid;
-        grid-template-columns: 30px 1fr;
-        box-shadow: 0 0 3px #ffffff;
-        margin-top: 5px;
-        border-radius: 10px;
-        transition: .4s all;
-        input{
-            color: #000;
-        }
-        span{
-            display: grid;
-            place-items: center;
-            color:white;
-        }
-        &.act{
-            box-shadow: 0 0 7px #ffffff;
-        }
-    }
     select{
         box-shadow: 0 0 2px #aaa;
         // border-left: 1px solid black;
